@@ -2,27 +2,15 @@
 session_start();
 
 
-/*use Montagne\Projet5\App\Model\Profil;
-use Montagne\Projet5\App\Model\Beat;
-use Montagne\Projet5\App\Model\Manager;
-use Montagne\Projet5\App\Model\ProfilManager;
-use Montagne\Projet5\App\Model\BeatManager;
-use Montagne\Projet5\App\Model\controller;*/
-
 require 'model/Autoloader.php';
 
 
 spl_autoload_register(array('Autoloader', 'autoload'));
-//require "model/BeatManager.php";
-//require "model/Beat.php";
-
-//require "model/ProfilManager.php";
-//require "model/Profil.php";
 
 require('controller/controller.php');
 
 $controller = new Montagne\Projet5\App\Controller\controller;
-//$backend = new Backend;
+
 
 
 try { 
