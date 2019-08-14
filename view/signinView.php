@@ -9,7 +9,7 @@
       <div class="row">
         <div class="col-lg-4 col-md-12 mx-auto">
           <div class="site-heading">
-          <h1 id="connect">Signin</h1>
+          <h1 id="connect">Create an account</h1>
             <form method="POST" action="index.php?action=signin">
             <div class="form-group_m">
               <input required type="pseudo" name="pseudo" id="" placeholder="Pseudo" class="form-control"
@@ -30,7 +30,7 @@
               <input required type="password" name="confirm_pass" id="" class="form-control" placeholder="Confirm Password">
             </div><br>
             <div class="form-group_m">
-              <input class="btn btn-primary" type="submit" name="signin"  class="form-control" value="Signin">
+              <input class="btn btn-primary" type="submit" name="signin"  class="form-control" value="Sign Up">
             </div><br>
             </form>
           </div>
@@ -38,8 +38,8 @@
         </div>
       </div>
       <div class="btn_signin">
-        <p style="color: #fff; font-weight: bold;">Already an account ?</p>
-        <a class="btn btn-primary" href="index.php?action=connexion">Login</a>
+        <p style="color: #fff; font-weight: bold;">Already have an account ?</p>
+        <a class="btn btn-primary" href="index.php?action=connexion">Log In</a>
       </div>
       <hr><hr>
     </div>
@@ -59,11 +59,7 @@
 
 
 
-  <div class="container" align="center">
-    <br>
-    <br>
-    <a class="btn btn-primary btn-xl js-scroll-trigger" href="index.php" id="home">HOME</a>
-  </div>
+
 
 
 

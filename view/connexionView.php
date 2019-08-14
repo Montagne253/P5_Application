@@ -10,7 +10,7 @@
       <div class="row">
         <div class="col-lg-4 col-md-12 mx-auto">
           <div class="site-heading">
-            <h1 id="connect">Login</h1>
+            <h1 id="connect">Log in to your account</h1>
             <form method="POST" action="index.php?action=connexion">
               <div class="form-group_m">
                 <input required type="pseudo" name="pseudoConnect" placeholder="Pseudo" class="form-control">
@@ -19,7 +19,7 @@
                 <input required type="password" name="passwordConnect" class="form-control"
                   placeholder="Password">
               </div><br><br>
-              <button type="submit" name="submitConnect" class="btn btn-primary">LOGIN</button>
+              <button type="submit" name="submitConnect" class="btn btn-primary">LOG IN</button>
               <br><br>
 <?php 
     if(isset($error))

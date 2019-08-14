@@ -1,54 +1,71 @@
 <?php ob_start(); ?>
 <?php  require('nav.php'); ?>
 <div class="container-full">
-  <header class="masthead_profil">
+<header class="masthead_profil">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
         <div class="col-lg-4 col-md-12 mx-auto">
           <div class="site-heading">
             <hr><hr><hr><hr>
-            
-              <a href="#down" aria-label="Flêche vers le bas" id="arrow">
-              <i class="fas fa-arrow-circle-down fa-w-16 fa-3x"></i><br><br>
+
+            <h4 id="connect_describ"><?php echo $profil->pseudo() ?></h4>
+            <a class="btn-xl text-uppercase js-scroll-trigger" href="#down" aria-label="Arrow down" id="arrow">
+              <i class="fas fa-caret-down fa-w-16 fa-3x"></i><br><br>
             </a>
           </div>
         </div>
       </div>
     </div>
   </header>
-  <div class="container-full">
+  <div class="container">
   <div class="table-responsive">
     <table class="table table-hover table-dark">
       <thead>
         <tr class="header_tab">
-          <td align="center" scope="col" class="headerTab">Titre</td>
+          <td align="left" scope="col" class="headerTab">Title</td>
           <td align="center" scope="col" class="headerTab">Genre</td>
-          <td align="center" scope="col" class="headerTab"></td>
-          <td align="center" scope="col" class="headerTab">Views</td>
-          <td align="center" scope="col" class="headerTab">Edit file</td>
+          <td align="center" scope="col" class="headerTab">Audio</td>
         </tr>
       </thead>
       <tbody>
+      <?php foreach($beats as $beat) { ?>
         <tr>
-          <td align="center" class="titleBeat"><strong><?= htmlspecialchars($beat->title()) ?></strong><br>
+          <td align="left" width="20%" class="beat"><strong><?= htmlspecialchars($beat->title()) ?></strong><br>
             <div class="date"><?php echo htmlspecialchars($beat->dateCreation()) ?></div>
           </td>
-          <td align="center"><?= htmlspecialchars($beat->genre()) ?></td>
-          <td align="center">
-            <audio controls="controls">
-              <source class="audio" src="profils/audio/<?= $beat->audio() ?>" type="audio/mp3" />
+          <td align="center" width="20%" class="beat"><?= htmlspecialchars($beat->genre()) ?></td>
+          <td align="right" width="60%" class="beat">
+            <audio controls="controls" class="audio">
+              <source src="profils/audio/<?= $beat->audio() ?>" type="audio/mp3" />
+              Votre navigateur ne supporte pas la balise HTML5 audio.
             </audio>
-          </td>
-          <td align="center"></td>
-          <td align="center">
-              <a class="btn btn-primary_delete" href="index.php?action=editBeat&id=<?php echo $beat->id(); ?>">DELETE</a>
           </td>
         </tr>
       </tbody>
+      <?php } ?>
+ 
+      
     </table>
     
+<div class="btn_page">
+<?php 
+for($i=1;$i<=$totalBeat;$i++) {
+    if($i == $currentPage) {
+
+    } else {
+    echo '
+      <a  class="btn btn-primary_page" href="index.php?action=beat&page='.$i.'">'.$i.'</a>
+    '
+   ;
+    }
+}
+?>
+</div>
   </div>
+
+ 
+</div>
  
   </div>
 

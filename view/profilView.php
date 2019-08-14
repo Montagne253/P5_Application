@@ -9,7 +9,7 @@
           <div class="site-heading">
             <hr><hr><hr><hr>
 
-            <h2 id="connect_describ"><?php echo $profil->pseudo() ?></h2>
+            <h4 id="connect_describ"><?php echo $profil->pseudo() ?></h4>
             <a class="btn-xl text-uppercase js-scroll-trigger" href="#down" aria-label="Arrow down" id="arrow">
               <i class="fas fa-caret-down fa-w-16 fa-3x"></i><br><br>
             </a>
@@ -54,11 +54,13 @@
     <table class="table table-dark">
       <tbody>
         <tr>
-          <td align="center" style="padding: 30px;" width="30%"><a class="btn btn-primary" role="button" href="index.php?action=upload&id=<?= $_SESSION['id'] ?>"><i class="fas fa-compact-disc"></i><br> Post Beat</a>
+          <td align="center" style="padding: 30px;" width="25%"><a class="btn btn-primary" role="button" href="index.php?action=upload&id=<?= $_SESSION['id'] ?>"><i class="fas fa-compact-disc"></i><br> Post Beat</a>
           </td>
-          <td align="center" style="padding: 30px;" width="30%"><a class="btn btn-primary" width="50%" role="button" href="index.php?action=editProfil"><i class="far fa-user-circle"></i><br>Edit Profil</a>
+          <td align="center" style="padding: 30px;" width="25%"><a class="btn btn-primary" width="50%" role="button" href="index.php?action=editProfil"><i class="far fa-user-circle"></i><br>Edit Profil</a>
           </td>
-          <td align="center" style="padding: 30px;" width="30%"><a class="btn btn-primary" role="button" href="index.php?action=editBeat&profil=<?= $_SESSION['id'] ?>"><i class="fas fa-trash-alt"></i><br>Edit Beats</a>
+          <td align="center" style="padding: 30px;" width="25%"><a class="btn btn-primary" role="button" href="index.php?action=editBeat&profil=<?= $_SESSION['id'] ?>"><i class="fas fa-trash-alt"></i><br>Edit Beats</a>
+          </td>
+          <td align="center" style="padding: 30px;" width="25%"><a class="btn btn-primary" role="button" href="index.php?action=beat&profil=<?= $_SESSION['id'] ?>&page=1"><i class="fas fa-compact-disc"></i><br>My Beats</a>
           </td>
         </tr>
       </tbody>
@@ -72,7 +74,7 @@
         <tr class="header_tab">
           <td align="left" scope="col" class="headerTab">Title</td>
           <td align="center" scope="col" class="headerTab">Genre</td>
-          <td align="right" scope="col" class="headerTab">Audio</td>
+          <td align="center" scope="col" class="headerTab">Audio</td>
         </tr>
       </thead>
       <tbody>

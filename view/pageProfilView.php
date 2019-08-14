@@ -45,9 +45,7 @@ for($i=1;$i<=$totalPages;$i++) {
 
     } else {
     echo '
-   
       <a  class="btn btn-primary_page" href="index.php?action=pageProfil&page='.$i.'">'.$i.'</a>
-    
     '
    ;
     }

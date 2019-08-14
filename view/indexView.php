@@ -205,7 +205,7 @@
             </div>
             <img class="img-fluid" src="">
             <div  class="img-fluid">
-              <img  src="profils/avatars/<?= $profil->avatar() ?>" width="350" height="250"/>
+              <img  src="profils/avatars/<?= $profil->avatar() ?>" width="100%" height="250"/>
             </div>
             <div class="portfolio-caption">
             <h4><?= $profil->pseudo(); ?></h4>

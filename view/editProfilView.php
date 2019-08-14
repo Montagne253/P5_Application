@@ -20,11 +20,11 @@
                         id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo $profil->email(); ?>" />
                 </div><br>
                 <div class="form-group_m">
-                    <input  type="password" name="newmdp" placeholder="new password" class="form-control"
+                    <input  required type="password" name="newmdp" placeholder="new password" class="form-control"
                         id="exampleInputPassword1"   value=""/>
                 </div><br>
                 <div class="form-group_m">
-                    <input  type="password" name="confirmnewmdp" placeholder="confirm new password" class="form-control"
+                    <input  required type="password" name="confirmnewmdp" placeholder="confirm new password" class="form-control"
                         id="exampleInputPassword1"  value=""/>
                 </div><br>
                 <div class="form-group_m">
@@ -51,6 +51,8 @@
     {
         echo '<font color="red">' . $error . "</font>";
     }
+
+    
 ?>
 </div>
 

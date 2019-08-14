@@ -11,7 +11,7 @@
             
           </div>
             
-          <h2 id="connect_describ"><?php echo $profil->pseudo() ?></h2>
+          <h4 id="connect_describ"><?php echo $profil->pseudo() ?></h4>
             <a class="btn-xl text-uppercase js-scroll-trigger" href="#down" aria-label="Arrow down" id="arrow">
               <i class="fas fa-caret-down fa-w-16 fa-3x"></i><br><br>
             </a>
@@ -36,7 +36,7 @@
           <td align="left" scope="col" class="headerTab">Title</td>
           <td align="center" scope="col" class="headerTab">Date</td>
           <td align="center" scope="col" class="headerTab">Genre</td>
-          <td align="center" scope="col" class="headerTab"></td>
+          <td align="center" scope="col" class="headerTab">Audio</td>
         </tr>
       </thead>
       <tbody>
