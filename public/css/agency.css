@@ -30,10 +30,53 @@ a:hover {
   width: 100%;
 }
 
-#message p {
+#advert {
+  font-family: 'Righteous', cursive;
+  font-size: 20px;
+  margin: 50px;
+  padding: 100px;
+}
+/*#message p {
   color: #ac3326 !important;
   background-color: #212529;
   
+}*/
+
+/*#message {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}*/
+
+#message p {
+  padding: 10px 35px;
+  font-size: 18px;
+  text-align: left;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "✔";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "✖";
 }
 
 h1,
@@ -533,7 +576,7 @@ header.masthead {
   z-index: 1;
   width: 100%;
   height: 650px;
-  background-color: rgba(66, 143, 36, 0.157);
+  background-color: rgba(66, 143, 36, 0.294);
   opacity: 1;
 
   
@@ -1170,7 +1213,7 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   
   .beat3 {
     font-size: 8px;
-    width: 50%;
+    width: 100%;
   }
   
   .profilTab {
