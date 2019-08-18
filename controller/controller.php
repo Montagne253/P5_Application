@@ -56,18 +56,69 @@ class Controller {
 
     }
 
-    function beat() 
+   /* function beat() 
     {
-        $beatManager = new BeatManager;
-        $beat = $beatManager->get($_GET['beat']);
 
-       // var_dump($beat);
+        if(isset($_SESSION['id'])) {
+
+            $ProfilManager = new ProfilManager;
+            $profil = $ProfilManager->get($_SESSION['id']);
+
+            
+
+            if(isset($_SESSION['id']) AND $profil->id() == $_SESSION['id'])
+            {
+
+        
+
+            $parPage = 2;
+        
+            $beatManager = new BeatManager;
+            $beatTotal = $beatManager->countLine();
+
+            var_dump($beatTotal);
+            die();
+
+            
+            
+            
+            $totalBeat = ceil($beatTotal/$parPage);
+    
+            if(isset($_GET['page']) AND !empty($_GET['page']) AND $_GET['page'] > 0 AND $_GET['page'] <= $totalBeat) {
+                $_GET['page'] = intval($_GET['page']);
+                $currentPage = $_GET['page'];
+    
+                $debut = ($currentPage-1)*$parPage;
+    
+           
+            $beatManager = new BeatManager;
+            $beats = $beatManager->displayBeatPagination($debut, $parPage);
+            
+            
+            
+    
+            }
+                
+                
+        } else {
+                $currentPage = 1;
+        }
+
+            
+
+    }  else 
+    {
+        header('Location: index.php?action=connexion');
+    }
+
+
+       
 
 
         require('view/beatView.php');
 
         
-    }
+    }*/
 
     function editBeat()
     {
@@ -174,8 +225,8 @@ class Controller {
 
                 if(isset($_FILES['audio']) AND !empty($_FILES['audio']['name']))
                 {
-                    //$audioName = $_FILES['audio']['name'];
-                    $sizeMax = 1280000000;
+                    
+                    $sizeMax = 12000000;
                     $extensionsValid = array('mp3');
                     if($_FILES['audio']['size'] <= $sizeMax) 
                     {
@@ -199,19 +250,19 @@ class Controller {
                                 $beatManager = new BeatManager;
                                 $beatManager->add($beat);
 
-                                $_SESSION['flash'] = "Your file upload successfuly";
+                                $_SESSION['flash'] = "You have uploaded your file successfully";
                                 
                                 header('Location: index.php?action=profil&id='.$_SESSION['id']);
 
                             }
                         } else 
                         {
-                            $error ="Votre fichier doit être de format : mp3";
+                            $_SESSION['flash'] ="Your file must be of format: mp3";
                         }
                         
                     } else
                     {
-                        $error = "Votre fichier ne doit pas dépasser 128 Mo";
+                        $_SESSION['flash'] = "Your file must not exceed 12 MB";
                     }
                 }
             }
@@ -253,12 +304,12 @@ class Controller {
                     }
                     else 
                     {
-                        $error ="Votre image doit être de format : jpg, jpeg";
+                        $error ="Your image must be in format: jpg, jpeg or png";
                     }
                 }
                 else 
                 {
-                    $error = "Votre avatar ne doit pas dépasser 2,9Mo";
+                    $error = "Your avatar must not exceed 5,09 MB";
                 }
             }
 
@@ -272,7 +323,7 @@ class Controller {
 
                 
 
-                $_SESSION['flash'] = "Votre avatar a bien été modifié !";
+                $_SESSION['flash'] = "Your avatar has been modified !";
 
                 header('Location: index.php?action=profil&id='.$_SESSION['id']);
             
@@ -377,17 +428,17 @@ class Controller {
                         }
                         else 
                         {
-                            $error = 'COMPTE INVALIDE<br>Le pseudo ou le mot de passe est incorrect ou n\'existe pas.' ;
+                            $_SESSION['flash'] = 'INVALID ACCOUNT<br>This pseudo or this passsword is incorrect or does\'nt exist.' ;
                         }
                     }
                     else 
                     {
-                        $error = "Mauvais pseudo ou mot de passe incorrect !";
+                        $_SESSION['flash'] = "Wrong pseudo or incorrect password !";
                     }
                 }
                 else 
                 {
-                    $error = 'Tous les champs doivent être remplis !';  
+                    $_SESSION['flash'] = 'Please fill out all field';  
                 }   
             }
 
@@ -403,7 +454,6 @@ class Controller {
             $pseudo = htmlspecialchars($_POST['pseudo']);
             $email = htmlspecialchars($_POST['email']);
             $genre = htmlspecialchars($_POST['genre']);
-            /*$story = htmlspecialchars($_POST['story']);*/
             $pass = $_POST['pass'];
             $confirm_pass = $_POST['confirm_pass'];
             $hash_pass = password_hash($pass, PASSWORD_BCRYPT);
