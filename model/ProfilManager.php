@@ -54,7 +54,7 @@ class ProfilManager extends Manager
         $db = $this->dbConnect();
         $profils = [];
     
-        $req = $db->query('SELECT id, pseudo, email, genre, story, avatar, DATE_FORMAT(date_creation, \'%d/%m/%Y\') AS date_creation FROM profil ORDER BY date_creation DESC LIMIT 1, 3');
+        $req = $db->query('SELECT id, pseudo, email, genre, story, avatar, DATE_FORMAT(date_creation, \'%d/%m/%Y\') AS date_creation FROM profil ORDER BY date_creation DESC LIMIT 0, 3');
         while ($data = $req->fetch()) {
             $profils[] = new Profil($data);
         }
