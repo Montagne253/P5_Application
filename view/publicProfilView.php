@@ -48,7 +48,7 @@
             <div class="date"><?php echo htmlspecialchars($beat->dateCreation()) ?></div>
           </td>
           <td align="center" class="beat2"><?= htmlspecialchars($beat->genre()) ?></td>
-          <td align="right" class="beat3">
+          <td align="" class="beat3">
             <audio controls="controls" class="audio" controlsList="nodownload">
               <source src="profils/audio/<?= $beat->audio() ?>" type="audio/mp3" />
               Votre navigateur ne supporte pas la balise HTML5 audio.

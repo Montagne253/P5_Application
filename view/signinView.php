@@ -7,7 +7,7 @@
 
     <div class="container" align="center">
       <div class="row">
-        <div class="col-lg-4 col-md-12 mx-auto">
+        <div class="col-lg-6 col-md-12 mx-auto">
           <div class="site-heading">
             <h1 id="connect">Create an account</h1>
             <form method="POST" action="index.php?action=signin" onsubmit="return verifForm(this)">
@@ -26,15 +26,15 @@
                   class="form-control" onblur="verifGenre(this)" value="<?php if(isset($genre)) { echo $genre; } ?>">
               </div><br>
               <div class="form-group_m">
-                <input required type="password" name="pass" id="password" class="form-control" placeholder="Password"
+                <input required type="password" name="pass" id="password" class="form-control" onkeyup='check();' placeholder="Password"
                   onblur="verifPass(this)" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                   title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
               </div><br>
               <div class="form-group_m">
-                <input required type="password" name="confirm_pass" id="" class="form-control"
+                <input required type="password" name="confirm_pass" id="confirm_password" class="form-control" onkeyup='check();'
                   placeholder="Confirm Password" onblur="verifPass(this)" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                   title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
-              </div><br>
+              </div><br><span id='advert'></span><br><br><br>
               <div class="form-group_m">
                 <input class="btn btn-primary" id="submit" type="submit" name="signin" class="form-control"
                   value="Sign Up">
