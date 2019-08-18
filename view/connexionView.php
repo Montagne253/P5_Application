@@ -4,7 +4,7 @@
 
 <?php $header = require('nav.php'); ?>
 <div class="container-full">
-<header class="masthead_login">
+  <header class="masthead_login">
     <div class="overlay"></div>
     <div class="container" align="center">
       <div class="row">
@@ -16,16 +16,20 @@
                 <input required type="pseudo" name="pseudoConnect" placeholder="Pseudo" class="form-control">
               </div><br>
               <div class="form-group_m">
-                <input required type="password" name="passwordConnect" class="form-control"
-                  placeholder="Password">
+                <input required type="password" name="passwordConnect" class="form-control" placeholder="Password">
               </div><br><br>
               <button type="submit" name="submitConnect" class="btn btn-primary">LOG IN</button>
               <br><br>
-<?php 
-    if(isset($error))
-    {
-        echo '<font color="red">' . $error . "</font>";
-    }
+<?php  if(isset($_SESSION['flash'])) { 
+      $flash = $_SESSION['flash'];
+?>
+              <div class="alert alert-danger" role="alert">
+                <?= $flash ?>
+              </div>
+              <?php   
+
+  } 
+  unset($_SESSION['flash']);
 ?>
             </form>
           </div>
@@ -34,7 +38,8 @@
     </div>
   </header>
   <div class="container" align="center">
-    <hr><hr>
+    <hr>
+    <hr>
     <a class="btn btn-primary btn-xl js-scroll-trigger" href="index.php" id="home">HOME</a>
   </div>
 </div>

@@ -1,4 +1,4 @@
-<?php $title = 'MH Production'; ?>
+<?php $title = 'BH Entertainment'; ?>
 
 <?php ob_start(); ?>
 <?php require('nav.php'); ?>
@@ -17,9 +17,10 @@
     </div>
   </header>
   <div class="container" align="center">
-  <hr><hr>
-  <a class="btn btn-primary btn-xl js-scroll-trigger" href="index.php" id="home">HOME</a>
-</div>
+    <hr>
+    <hr>
+    <a class="btn btn-primary btn-xl js-scroll-trigger" href="index.php" id="home">HOME</a>
+  </div>
 
 </div>
 

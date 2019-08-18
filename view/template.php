@@ -27,18 +27,7 @@
   <!-- Custom styles for this template -->
   <link href="public/css/agency.css" rel="stylesheet">
 
-  <link rel="icon" type="image/png" href="img/icone2.jpg" />
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/5.0.5/tinymce.min.js"></script>
-
-  <!--<script src="//cdn.tinymce.com/4/tinymce.min.js"></script> -->
-  
-  <script>
-    tinymce.init({
-      selector: '#mytextarea'
-      language: "fr_FR",
-    });
-  </script>
+  <link rel="icon" type="image/png" href="public/css/img/icone.jpg" />
 
 </head>
 
@@ -54,23 +43,14 @@
   <!-- Plugin JavaScript -->
   <script src="public/vendor/jquery-easing/jquery.easing.min.js"></script>
 
-  <!-- Contact form JavaScript -->
-  <script src="public/js/jqBootstrapValidation.js"></script>
-  <script src="public/js/contact_me.js"></script>
-  <script src="public/js/table.js"></script>
-
+ 
   <!-- Custom scripts for this template -->
-  <script src="public/js/agency.min.js"></script>
+  <script src="public/js/libs/agency.min.js"></script>
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
   </script>
-
-   
-	<link rel="stylesheet" href="../css/progression-player.css" /><!-- Default Player Styles -->
-	<link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" /><!-- Player Icons -->	
-
 
 
 </body>

@@ -41,18 +41,17 @@
 <div class="btn_page">
 <?php 
 for($i=1;$i<=$totalPages;$i++) {
-    if($i == $courantPage) {
+    if($i==$courantPage) { 
 
-    } else {
-    echo '
+    }
+    else { 
+      echo '
       <a  class="btn btn-primary_page" href="index.php?action=pageProfil&page='.$i.'">'.$i.'</a>
-    '
-   ;
+      ';
     }
 }
 ?>
 </div>
-<!--<div class="btn_page"><a class="btn btn-primary_page" href="index.php?action=pagination&page='.$i.'">'.$i.'</a></div>'-->
 
 
 

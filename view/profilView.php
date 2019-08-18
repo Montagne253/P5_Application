@@ -54,14 +54,14 @@
     <table class="table table-dark">
       <tbody>
         <tr>
-          <td align="center" style="padding: 30px;" width="25%"><a class="btn btn-primary" role="button" href="index.php?action=upload&id=<?= $_SESSION['id'] ?>"><i class="fas fa-compact-disc"></i><br> Post Beat</a>
+          <td align="center" class="profilTab" ><a class="btn btn-primary" role="button" href="index.php?action=upload&id=<?= $_SESSION['id'] ?>"><i class="fas fa-compact-disc"></i><br> Post Beat</a>
           </td>
-          <td align="center" style="padding: 30px;" width="25%"><a class="btn btn-primary" width="50%" role="button" href="index.php?action=editProfil"><i class="far fa-user-circle"></i><br>Edit Profil</a>
+          <td align="center" class="profilTab" ><a class="btn btn-primary" width="50%" role="button" href="index.php?action=editProfil"><i class="far fa-user-circle"></i><br>Edit Profil</a>
           </td>
-          <td align="center" style="padding: 30px;" width="25%"><a class="btn btn-primary" role="button" href="index.php?action=editBeat&profil=<?= $_SESSION['id'] ?>"><i class="fas fa-trash-alt"></i><br>Edit Beats</a>
+          <td align="center" class="profilTab" ><a class="btn btn-primary" role="button" href="index.php?action=editBeat&profil=<?= $_SESSION['id'] ?>"><i class="fas fa-trash-alt"></i><br>Edit Beats</a>
           </td>
-          <td align="center" style="padding: 30px;" width="25%"><a class="btn btn-primary" role="button" href="index.php?action=beat&profil=<?= $_SESSION['id'] ?>&page=1"><i class="fas fa-compact-disc"></i><br>My Beats</a>
-          </td>
+          <!--<td align="center" style="padding: 30px;" width="25%"><a class="btn btn-primary" role="button" href="index.php?action=beat&profil=<?= $_SESSION['id'] ?>&page=1"><i class="fas fa-compact-disc"></i><br>My Beats</a>
+          </td>-->
         </tr>
       </tbody>
     </table>
@@ -80,11 +80,11 @@
       <tbody>
       <?php foreach($beats as $beat) { ?>
         <tr>
-          <td align="left" width="20%" class="beat"><strong><?= htmlspecialchars($beat->title()) ?></strong><br>
+          <td align="left"  class="beat1"><strong><?= htmlspecialchars($beat->title()) ?></strong><br>
             <div class="date"><?php echo htmlspecialchars($beat->dateCreation()) ?></div>
           </td>
-          <td align="center" width="20%" class="beat"><?= htmlspecialchars($beat->genre()) ?></td>
-          <td align="right" width="60%" class="beat">
+          <td align="center"  class="beat2"><?= htmlspecialchars($beat->genre()) ?></td>
+          <td align="right"  class="beat3">
             <audio controls="controls" class="audio">
               <source src="profils/audio/<?= $beat->audio() ?>" type="audio/mp3" />
               Votre navigateur ne supporte pas la balise HTML5 audio.
