@@ -56,70 +56,7 @@ class Controller {
 
     }
 
-   /* function beat() 
-    {
-
-        if(isset($_SESSION['id'])) {
-
-            $ProfilManager = new ProfilManager;
-            $profil = $ProfilManager->get($_SESSION['id']);
-
-            
-
-            if(isset($_SESSION['id']) AND $profil->id() == $_SESSION['id'])
-            {
-
-        
-
-            $parPage = 2;
-        
-            $beatManager = new BeatManager;
-            $beatTotal = $beatManager->countLine();
-
-            var_dump($beatTotal);
-            die();
-
-            
-            
-            
-            $totalBeat = ceil($beatTotal/$parPage);
-    
-            if(isset($_GET['page']) AND !empty($_GET['page']) AND $_GET['page'] > 0 AND $_GET['page'] <= $totalBeat) {
-                $_GET['page'] = intval($_GET['page']);
-                $currentPage = $_GET['page'];
-    
-                $debut = ($currentPage-1)*$parPage;
-    
-           
-            $beatManager = new BeatManager;
-            $beats = $beatManager->displayBeatPagination($debut, $parPage);
-            
-            
-            
-    
-            }
-                
-                
-        } else {
-                $currentPage = 1;
-        }
-
-            
-
-    }  else 
-    {
-        header('Location: index.php?action=connexion');
-    }
-
-
-       
-
-
-        require('view/beatView.php');
-
-        
-    }*/
-
+   
     function editBeat()
     {
 
@@ -188,10 +125,6 @@ class Controller {
             $courantPage = 1;
         }
 
-       
-
-
-        
 
         require('view/pageProfilView.php');
 
