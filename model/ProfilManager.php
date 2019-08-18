@@ -2,10 +2,7 @@
 
 namespace Montagne\Projet5\App\Model;
 
-//use Montagne\Projet5\App\Model\Profil;
 
-
-//require_once('model/Manager.php');
 
 class ProfilManager extends Manager
 {
