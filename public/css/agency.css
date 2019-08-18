@@ -7,6 +7,7 @@ body {
 p {
   line-height: 1.75;
   color: #1DB954;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 a {
@@ -21,6 +22,18 @@ a:hover {
 
 .text-primary {
   color: #1DB954 !important;
+}
+
+#message {
+  background-color: #212529;
+  padding: 50px;
+  width: 100%;
+}
+
+#message p {
+  color: #ac3326 !important;
+  background-color: #212529;
+  
 }
 
 h1,
@@ -42,6 +55,12 @@ h6 {
   font-size: 25px;
   margin-bottom: 25px;
 
+}
+
+
+
+.alert {
+  font-family: 'Righteous', cursive;
 }
 
 #post {
@@ -125,13 +144,26 @@ img {
   font-size: 15px;
 }
 
-.beat {
-  font-size: 17px;
+
+
+.beat1 {
+  font-size: 16px;
+  width: 25%;
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   line-break: center;
 }
 
-
+.beat2 {
+  width: 15%;
+  font-size: 16px;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  line-break: center;
+}
+.beat3 {
+  width: 60%;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  line-break: center;
+}
 
 .page-section {
   margin-top: 90px;
@@ -172,6 +204,11 @@ img-fluid {
 
 .table {
   border-radius: 10px;
+}
+
+.profilTab {
+  padding: 30px;
+  width: 30%;
 }
 
 .btn_page {
@@ -256,7 +293,7 @@ img-fluid {
   width: 100%;
   margin-top: 50px;
   margin-bottom: 20px;
-  border-radius: 190px;
+  border-radius: 20px;
   font-size: 40px;
 
 }
@@ -1089,13 +1126,63 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 
 @media (max-width: 750px) {
 
+
+
+  #mainNav .navbar-toggler {
+    font-size: 12px;
+    right: 0;
+    padding: 13px;
+    text-transform: uppercase;
+    color: white;
+    border: 0;
+    background-color: #1DB954;
+    font-family:'Righteous', cursive;
+  }
+
+  .text-muted {
+    font-size: 14px;
+  }
+
+
+  .audio {
+    width: 100% !important;
+  }
+
+
+  .date {
+    font-size: 8px;
+  }
+
   
-.btn_page {
+
+  .beat1 {
+    font-size: 12px; 
+    line-break: auto;
+    width: 35%;
+  }
+
   
-  display: inline-block;
-  margin-right: 50px;
-  float: right;  
-}
+  .beat2 {
+    font-size: 12px;
+    width: 15%;
+  }
+
+  
+  .beat3 {
+    font-size: 8px;
+    width: 50%;
+  }
+  
+  .profilTab {
+    padding: 10px;
+  }
+
+  .btn_page {
+    
+    display: inline-block;
+    margin-right: 50px;
+    float: right;  
+  }
 
   header.masthead {
     height: 450px;
@@ -1122,7 +1209,7 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 
   #mainNav .navbar-brand {
     color: #1DB954;
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Righteous', cursive;
   }
   
   #avatar {
@@ -1141,7 +1228,7 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
     margin-top: 50px;
     margin-bottom: 20px;
     border-radius: 5px;
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Righteous', cursive;
   }
 
   #file {
