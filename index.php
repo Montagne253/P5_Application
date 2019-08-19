@@ -59,10 +59,12 @@ try {
         {
             $controller->signin();
         }
+
         elseif ($_GET['action'] == 'pageProfil')
         {
             $controller->pageProfil();
         }
+
         elseif ($_GET['action'] == 'upload')
         {
             
