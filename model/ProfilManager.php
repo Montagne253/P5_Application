@@ -123,8 +123,6 @@ class ProfilManager extends Manager
         $req = $db->query('SELECT id FROM profil');
         return $req->rowCount();
 
-
-
     }
 
     public function displayProfilPagination($start, $perPage) {
@@ -139,39 +137,10 @@ class ProfilManager extends Manager
         }
         return $profils;
     
-        //return $profil;
+      
     }
 
 
     
-    /*public function pageProfil() {
-
-        $db = $this->dbConnect();
-        $profils = [];
-       
-        
-        
-        $req = $db->query('SELECT * FROM profil ORDER BY id DESC');
-        while($data = $req->fetch()) {
-            $profils[] = new Profil($data);
-        }
-        return $profils;
-    
-
-
-    }
-    /*public function addAvatar(Profil $profil)
-    {
-        $db = $this->dbConnect();
-    
-        $req = $db->prepare('UPDATE profil SET pseudo = :pseudo, email = :email, pass = :pass, genre = :genre, story = :story, date_modification = NOW(), avatar = :avatar  WHERE id = :id');
-        $req->execute(array(
-           "pseudo" => $profil->pseudo(),
-           "email" => $profil->email(),
-           "pass" => $profil->pass(),
-           
-           "avatar" => $profil->avatar(),
-           "id" => $profil->id()
-        ));
-    }*/
+  
 }
