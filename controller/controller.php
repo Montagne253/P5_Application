@@ -130,6 +130,9 @@ class Controller {
 
     }
 
+
+    
+
     function listProfil()
     {
 
@@ -344,7 +347,7 @@ class Controller {
 
                    
         
-                // $userexist = $requser->rowCount();
+             
                     if($user) 
                     {
                     
