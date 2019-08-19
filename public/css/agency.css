@@ -26,15 +26,23 @@ a:hover {
 
 #message {
   background-color: #212529;
-  padding: 50px;
+  padding: 20px;
   width: 100%;
+}
+
+
+
+#message p {
+  text-align: center;
+  font-size: 12px;
 }
 
 #advert {
   font-family: 'Righteous', cursive;
-  font-size: 20px;
-  margin: 50px;
-  padding: 100px;
+  font-size: 15px;
+  width: 100%;
+  margin-bottom: 5px;;
+  padding: 10px;
 }
 /*#message p {
   color: #ac3326 !important;
@@ -408,6 +416,16 @@ img-fluid {
 .btn_signin {
   width: 100%;
   padding: 50px;
+  border-radius: 9px ;
+  color: #1aa34a; 
+  font-weight: bold; 
+  background-color: #212529 !important;
+}
+
+.btn_signin_beat {
+  width: 100%;
+  padding: 50px;
+  margin-bottom: 100px;
   border-radius: 9px ;
   color: #1aa34a; 
   font-weight: bold; 
@@ -1170,7 +1188,22 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 @media (max-width: 750px) {
 
 
+  .btn_beat {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 150px;
+    border-radius: 9px ;
+    color: #1aa34a; 
+    font-weight: bold; 
+    background-color: #212529 !important;
+  }
 
+  #advert {
+    font-family: 'Righteous', cursive;
+    font-size: 14px;
+    margin: none;
+    padding: 10px;
+  }
   #mainNav .navbar-toggler {
     font-size: 12px;
     right: 0;
@@ -1186,6 +1219,9 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
     font-size: 14px;
   }
 
+  .footer {
+    margin-top: 150px;
+  }
 
   .audio {
     width: 100% !important;
