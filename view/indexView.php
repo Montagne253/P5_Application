@@ -23,8 +23,8 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h2 class="section-heading text-uppercase" id="">Process</h2>
-        <h3 class="section-subheading text-muted" id="">Use application</h3>
+        <h2 class="section-heading text-uppercase" >Process</h2>
+        <h3 class="section-subheading text-muted" >Use application</h3>
       </div>
     </div>
     <div class="row text-center">
@@ -33,24 +33,24 @@
           <i class="fas fa-circle fa-stack-2x text-primary"></i>
           <i class="fas fa-hand-spock fa-stack-1x fa-inverse"></i>
         </span>
-        <h4 class="service-heading" id="">Free access</h4>
-        <p class="text-muted" id="">Create your profil on this platform. It's free !</p>
+        <h4 class="service-heading" >Free access</h4>
+        <p class="text-muted" >Create your profil on this platform. It's free !</p>
       </div>
       <div class="col-md-4">
         <span class="fa-stack fa-4x">
           <i class="fas fa-circle fa-stack-2x text-primary"></i>
           <i class="fas  fa-users fa-stack-1x fa-inverse"></i>
         </span>
-        <h4 class="service-heading" id="">Show</h4>
-        <p class="text-muted" id="">Post your tracks and show your talent.</p>
+        <h4 class="service-heading" >Show</h4>
+        <p class="text-muted" >Post your tracks and show your talent.</p>
       </div>
       <div class="col-md-4">
         <span class="fa-stack fa-4x">
           <i class="fas fa-circle fa-stack-2x text-primary"></i>
           <i class="fas fa-address-card fa-stack-1x fa-inverse"></i>
         </span>
-        <h4 class="service-heading" id="">Control</h4>
-        <p class="text-muted" id="">Edit your profil and your files. You keep the control.</p>
+        <h4 class="service-heading" >Control</h4>
+        <p class="text-muted" >Edit your profil and your files. You keep the control.</p>
       </div>
     </div>
   </div>
@@ -106,8 +106,8 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h2 class="section-heading text-uppercase" id="portfolio">Latest Profils</h2>
-        <h3 class="section-subheading text-muted" id="portfolio">See if it's interest you</h3>
+        <h2 class="section-heading text-uppercase" >Latest Profils</h2>
+        <h3 class="section-subheading text-muted" >See if it's interest you</h3>
       </div>
     </div>
     <div class="row">
@@ -125,7 +125,7 @@
             <h4><?= $profil->pseudo(); ?></h4>
           </div>
           <div class="img-fluid">
-            <img src="profils/avatars/<?= $profil->avatar() ?>" width="100%" height="200px" lt="avatar_porfil" />
+            <img src="profils/avatars/<?= $profil->avatar() ?>" width="100%" height="250" alt="avatar_porfil" />
           </div>
         </a>
 
