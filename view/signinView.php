@@ -30,6 +30,14 @@
                   onblur="verifPass(this)" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                   title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
               </div><br>
+              <div id="message">
+                <h4>Password must contain the following:</h4>
+                <hr>
+                <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                <p id="number" class="invalid">A <b>number</b></p>
+                <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+              </div>
               <div class="form-group_m">
                 <input required type="password" name="confirm_pass" id="confirm_password" class="form-control" onkeyup='check();'
                   placeholder="Confirm Password" onblur="verifPass(this)" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
@@ -49,14 +57,6 @@
                   echo '<font color="red" family="Righteous, cursive">' . $error . "</font>";
               }
           ?>
-          </div>
-          <div id="message">
-            <h4>Password must contain the following:</h4>
-            <hr>
-            <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
-            <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
-            <p id="number" class="invalid">A <b>number</b></p>
-            <p id="length" class="invalid">Minimum <b>8 characters</b></p>
           </div>
         </div>
       </div>

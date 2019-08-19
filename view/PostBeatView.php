@@ -5,7 +5,7 @@
 <div class="container-full">
   <header class="masthead">
     <div class="overlay"></div>
-    <div class="btn_signin">
+    <div class="btn_beat">
       <div class="container" align="center">
         <h1 id="connect">Upload your beat</h1>
         <div class="row">
@@ -45,7 +45,7 @@
       </div>
   </header>
 </div>
-
+<hr><hr><hr><hr><hr><hr><hr><hr><hr>
 <?php require('footer.php'); ?>
 
 <?php $content = ob_get_clean(); ?>
