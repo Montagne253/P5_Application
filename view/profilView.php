@@ -23,11 +23,25 @@
   <div class="describ">
     <div class="showAvatar avatar" style="background-image:url('profils/avatars/<?= $profil->avatar() ?>')" width="250" height="250"> <hr><hr> 
     </div>
+
+
     <br>
     <hr>
     <form method="POST" action="index.php?action=editAvatar" enctype="multipart/form-data">
       <input type="file" name="avatar" id="file"/><br><br>
       <input class="btn btn-primary" type="submit" value="SAVE AVATAR" /><br><br>
+<?php  if(isset($_SESSION['flash'])) { 
+      $flash = $_SESSION['flash'];
+      
+      ?>
+    <div class="alert alert-danger" role="alert">
+      <?= $flash ?>
+    </div>
+<?php   
+
+  } 
+  unset($_SESSION['flash']);
+  ?>
     </form>
     <hr><hr>
     <p>Email : <?php echo $profil->email(); ?></p>

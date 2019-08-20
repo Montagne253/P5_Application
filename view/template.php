@@ -8,7 +8,7 @@
   <meta name="description"  content="BH - Entertainment | Independents Beatmakers | Independents Beatmaker's platform" />
   <meta name="author" content="B.H - Production">
 
-  <title>B.H - Entertainment | Independents Beatmakers </title>
+  <title>B.H - Entertainment | Independents Beatmakers</title>
 
   <!-- Bootstrap core CSS -->
   <link href="public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
