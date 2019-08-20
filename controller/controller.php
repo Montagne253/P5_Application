@@ -236,32 +236,33 @@ class Controller {
                         if($result)
                         {
                             
+                            $avatarEdit = new Profil(array(
+                                'avatar' => $rename,
+                                'id' => $_SESSION['id']
+                            ));
+                            $avatarChange = new ProfilManager();
+                            $avatarChange->updateAvatar($avatarEdit);
+
+                            
+
+                            $_SESSION['flash'] = "Your avatar has been modified !";
+
+                            header('Location: index.php?action=profil&id='.$_SESSION['id']);
+                            
                         }
                     }
-                    else 
+                    else ($extensionValid != array('jpg', 'jpeg', 'gif', 'png'));
                     {
-                        $error ="Your image must be in format: jpg, jpeg or png";
+                        $_SESSION['flash'] = "Your image must be in format: jpg, jpeg or png";
                     }
                 }
                 else 
                 {
-                    $error = "Your avatar must not exceed 5,09 MB";
+                    $_SESSION['flash']  = "Your avatar must not exceed 5,09 MB";
                 }
             }
 
                     
-                $avatarEdit = new Profil(array(
-                    'avatar' => $rename,
-                    'id' => $_SESSION['id']
-                ));
-                $avatarChange = new ProfilManager();
-                $avatarChange->updateAvatar($avatarEdit);
-
-                
-
-                $_SESSION['flash'] = "Your avatar has been modified !";
-
-                header('Location: index.php?action=profil&id='.$_SESSION['id']);
             
 
         }
@@ -308,7 +309,7 @@ class Controller {
                 $pierre->update($paul);
 
 
-                $_SESSION['flash'] = "Votre profil a bien été modifié !";
+                $_SESSION['flash'] = "Your profil has been modified !";
 
 
                 header('Location: index.php?action=profil&id='.$_SESSION['id']);
