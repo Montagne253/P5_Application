@@ -1,5 +1,9 @@
 <?php ob_start(); ?>
-<?php  require('nav.php'); ?>
+<?php
+  $descript = "BH - Entertainment | Your profil | Independents Beatmaker's platform"; 
+  $titre ='B.H - Entertainment | Your Profil';   
+  require('nav.php'); 
+?>
 <div class="container-full">
   <header class="masthead_profil">
     <div class="overlay"></div>
@@ -72,7 +76,7 @@
           </td>
           <td align="center" class="profilTab" ><a class="btn btn-primary" width="50%" role="button" href="index.php?action=editProfil"><i class="far fa-user-circle"></i><br>Edit Profil</a>
           </td>
-          <td align="center" class="profilTab" ><a class="btn btn-primary" role="button" href="index.php?action=editBeat&profil=<?= $_SESSION['id'] ?>"><i class="fas fa-trash-alt"></i><br>Edit Beats</a>
+          <td align="center" class="profilTab" ><a id="editBeat" class="btn btn-primary" role="button" href="index.php?action=editBeat&profil=<?= $_SESSION['id'] ?>"><i class="fas fa-trash-alt"></i><br>Edit Beats</a>
           </td>
           <!--<td align="center" style="padding: 30px;" width="25%"><a class="btn btn-primary" role="button" href="index.php?action=beat&profil=<?= $_SESSION['id'] ?>&page=1"><i class="fas fa-compact-disc"></i><br>My Beats</a>
           </td>-->
@@ -111,7 +115,8 @@
     </table>
     
   </div>
- 
+<script type="text/javascript" src="public/js/libs/jquery.min.js"></script>
+<script type="text/javascript" src="public/js/libs/navigation.js"></script>
 </div>
 
 
@@ -121,7 +126,7 @@
 <hr><hr><hr>
 
 <div class="btn_connexion" align='center'>
-  <a class="btn btn-primary_deco" role="button" href="index.php?action=deconnexion" >SIGN OUT</a>
+  <a class="btn btn-primary_deco" role="button" href="index.php?action=deconnexion" >LOG OUT</a>
 </div>
 
 <?php require('footer.php'); ?>

@@ -1,19 +1,19 @@
 <?php ob_start(); ?>
-<?php  require('nav.php'); ?>
+<?php  
+  $descript = "BH - Entertainment | Edit Beats | Edit and delete your files"; 
+  $titre ='B.H - Entertainment | Edit Beats'; 
+  require('nav.php');
+?>
 <div class="container-full">
   <header class="masthead_profil">
-    <div class="overlay"></div>
     <div class="container">
       <div class="row">
         <div class="col-lg-4 col-md-12 mx-auto">
           <div class="site-heading">
-            <hr>
-            <hr>
-            <hr>
-            <hr>
-
-            <a href="#down" aria-label="Flêche vers le bas" id="arrow">
-              <i class="fas fa-arrow-circle-down fa-w-16 fa-3x"></i><br><br>
+            <hr><hr><hr><hr>
+            <h4 id="connect_describ"><?php echo $profil->pseudo() ?></h4>
+            <a class="btn-xl text-uppercase js-scroll-trigger" href="#down" aria-label="Arrow down" id="arrow">
+              <i class="fas fa-caret-down fa-w-16 fa-3x"></i><br><br>
             </a>
           </div>
         </div>
@@ -23,6 +23,7 @@
   <hr>
   <hr>
   <hr>
+
   <div class="container">
     <div class="table-responsive">
       <table class="table table-hover table-dark">
@@ -50,22 +51,16 @@
               </audio>
             </td>
             <td align="center" width="30%" class="beat1">
-              <script type="text/javascript" class="confirm">
-                function confirmation() {
-                  return confirm('Are you sure you want to delete this file ?');
-                }
-              </script>
-              <a class="btn btn-primary_delete" onclick="return confirmation()"
+              <a class="btn btn-primary_delete"
                 href="index.php?action=editBeat&beat=<?= $beat->id(); ?>">DELETE</a>
             </td>
           </tr>
         </tbody>
         <?php } ?>
       </table>
-
     </div>
-
   </div>
+
 
 
 
@@ -78,10 +73,13 @@
       Profil</a>
   </div>
 
+<script type="text/javascript" src="public/js/libs/jquery.min.js"></script>
+<script type="text/javascript" src="public/js/libs/app.js"></script>
 
+</div>
 
-  <?php require('footer.php'); ?>
+<?php require('footer.php'); ?>
 
-  <?php $content = ob_get_clean(); ?>
+<?php $content = ob_get_clean(); ?>
 
-  <?php require('template.php'); ?>
+<?php require('template.php'); ?>

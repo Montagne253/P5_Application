@@ -1,7 +1,9 @@
-<?php $title = 'Create your profile'; ?>
 <?php ob_start(); ?>
-<?php require('nav.php'); ?>
-
+<?php
+  $descript = "BH - Entertainment | Post your Beat | Upload your file (mp3 format) with title and genre."; 
+  $titre = 'B.H - Entertainment | Post your beat, upload your file';
+  require('nav.php'); 
+?>
 <div class="container-full">
   <header class="masthead">
     <div class="overlay"></div>
@@ -13,10 +15,10 @@
             <div class="site-heading">
               <form method="POST" enctype="multipart/form-data" action="index.php?action=upload">
                 <div class="form-group_m">
-                  <input required type="title" name="title" id="" placeholder="Title" class="form-control" value="">
+                  <input required type="title" name="title" id="" placeholder="Title" class="form-control" value="<?php if(isset($title)) { echo $title; } ?>">
                 </div><br>
                 <div class="form-group_m">
-                  <input required type="text" name="genre" id="" placeholder="Genre" class="form-control" value="">
+                  <input required type="text" name="genre" id="" placeholder="Genre" class="form-control" value="<?php if(isset($genre)) { echo $genre; } ?>">
                 </div><br>
                 <input required type="file" name="audio" id="file">
                 <hr>

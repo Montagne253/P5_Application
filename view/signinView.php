@@ -1,4 +1,4 @@
-<?php $title = 'Create your profile'; ?>
+<?php $titre = 'B.H Entertainment | Create your account'; ?>
 <?php ob_start(); ?>
 <?php require('nav.php'); ?>
 

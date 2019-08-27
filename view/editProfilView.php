@@ -1,6 +1,10 @@
 <?php $title = 'Create your profile'; ?>
 <?php ob_start(); ?>
-<?php require('nav.php'); ?>
+<?php
+  $descript = "BH - Entertainment | Edit your profil | Add a description, edit and modified your pseudo, email, password and your musical genre."; 
+  $titre ='B.H - Entertainment | Edit your profil';   
+  require('nav.php'); 
+?>
 
 <div class="container-full">
   <header class="masthead_signin" style="background-image: url('public/css/img/nice.jpg');">

@@ -1,5 +1,9 @@
 <?php ob_start(); ?>
-<?php  require('nav.php'); ?>
+<?php
+  $descript = "BH - Entertainment | Your profil | Independents Beatmaker's platform"; 
+  $titre = 'B.H - Entertainment | '. ' '. $profil->pseudo();   
+  require('nav.php'); 
+?>
 <div class="container-full">
   <header class="masthead_profil">
     <div class="overlay"></div>

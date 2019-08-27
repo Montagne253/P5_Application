@@ -1,6 +1,12 @@
 <?php ob_start(); ?>
 
-<?php require('nav.php'); ?>
+<?php
+  $descript = 'Beat High Entertainment | Independents Beatmakers | Independents Beatmaker\'s platform'; 
+  $titre ='B.H - Entertainment | Independent Beatmakers | HOME '; 
+  require('nav.php'); 
+?>
+
+
 
 <!-- Header -->
 <header class="masthead" style="background-image: url('public/css/img/studio_zic.jpg');">
@@ -9,7 +15,7 @@
     <div class="container">
       <div class="intro-text">
         <div class="intro-lead-in">Beat High Entertainment</div>
-        <div class="intro-heading text-uppercase">Independent Beatmakers</div>
+        <div class="intro-heading text-uppercase">Independents Beatmakers</div>
         <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">show
         </a>
       </div>

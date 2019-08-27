@@ -1,8 +1,9 @@
-<?php $title = 'Profil Connexion' ?>
-
 <?php ob_start(); ?>
-
-<?php $header = require('nav.php'); ?>
+<?php 
+  $titre ='B.H - Entertainment | Account access';
+  $descript ='B.H - Entertainment | Account access'; 
+  $header = require('nav.php'); 
+?>
 <div class="container-full">
   <header class="masthead_login">
     <div class="overlay"></div>
@@ -37,11 +38,10 @@
       </div>
     </div>
   </header>
-  <div class="container" align="center">
-    <hr>
-    <hr>
-    <a class="btn btn-primary btn-xl js-scroll-trigger" href="index.php" id="home">HOME</a>
-  </div>
+    <div class="btn_signin" align="center">
+      <p style="color: #fff; font-weight: bold;">You don't have an account ?</p>
+      <a class="btn btn-primary" href="index.php?action=signin">Sign Up</a>
+    </div>
 </div>
 
 <?php require('footer.php'); ?>

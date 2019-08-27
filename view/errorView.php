@@ -1,7 +1,9 @@
-<?php $title = 'BH Entertainment'; ?>
+
 
 <?php ob_start(); ?>
-<?php require('nav.php'); ?>
+<?php
+$titre = 'BH Entertainment | ERROR PAGE'; 
+require('nav.php'); ?>
 
 
 <div class="container-full">

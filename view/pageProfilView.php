@@ -1,6 +1,11 @@
 <?php ob_start(); ?>
 
-<?php require('nav.php'); ?>
+<?php
+  $descript = 'Beat High Entertainment | Independents Beatmakers | Found all independents beatmakers who use this application, all public profil | Free Beat.'; 
+  $titre ='B.H - Entertainment | Public Profil | All Beatmakers'; 
+  require('nav.php'); 
+?>
+
 
 
 <hr>
