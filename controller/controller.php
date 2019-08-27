@@ -59,6 +59,8 @@ class Controller {
    
     function editBeat()
     {
+        $ProfilManager = new ProfilManager;
+        $profil = $ProfilManager->get($_SESSION['id']);
 
         $beatManager = new BeatManager;
         $beats = $beatManager->getList($_SESSION['id']);
